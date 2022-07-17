@@ -17,13 +17,7 @@ By Edgardo Lopez
 *  [Installation](#installation)
 *  [Usage](#usage)
 *  [The Process](#the-process)
-*       - IDs that are being defined
-        (b.)    CSS in accordanace to Modal
-        c.  HTML format is structured correctly for the Modal
-        d.  JS functioning correctly when the buttons are clicked
-        e.  Setting a timer/steps for the questions
-        f.  Ensuring data is being extracted when called
-*  [What Was Done Differently](#differently)
+*  [What Was Done Differently](#what-was-done-differently)
 *  [Contributing](#contributing)
 *  [Project Status](#project-status)
 *  [Disclaimer](#disclaimer)
@@ -183,7 +177,7 @@ This is an empty array.  Whenever you click "yes" on its respected cases, you ta
 
 We need this so that it'll randomly generate the password.
 
-##  [What Was Done Differently](#what-was-done-differently-1)
+##  [What Was Done Differently](#what-was-done-differently)
 
 I've changed the " " to `` on the majority of the code.  The reason for that being is because I'll be using the '' and "" symbols and that allows for me to use it.  If I use '', then I can't use strings or statements such as:  can't
 
