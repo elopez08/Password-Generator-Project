@@ -17,7 +17,7 @@ By Edgardo Lopez
 *  [Installation](#installation)
 *  [Usage](#usage)
 *  [The Process](#the-process)
-        A.  IDs that are being defined
+        (A) IDs that are being defined
         (b.)    CSS in accordanace to Modal
         c.  HTML format is structured correctly for the Modal
         d.  JS functioning correctly when the buttons are clicked
