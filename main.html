@@ -9,144 +9,46 @@
     <title>Page Title</title>
 </head>
 
-<!-- To open up a new window, the following is what I have as notes.  Watch carefully since it will have a few things we need to do -->
 
 <body>
 
-    <!-- Irrelavent.  It is just a title -->
-    <h2>Modal Example</h2>
-
-<!-- Trigger/Open The Modal -->
-
-<!-- 
-
-    We need to have something in order to trigger.  This one uses a button.
-    Remember that id="myBtn"
-
-    Also, "Open Modal" is the text inside the button
-
--->
-    <button id="myBtn">Open Modal</button>
-
-    <p>Your password is: </p>
-    <p id = "passwordgenerated"></p>
-
-<!-- The Modal -->
-
-<!-- 
-    
-    First, we start out by declaring a value of 'div'.  Remember that with this declaration, we are telling the program 
-    that there's going to be a function
-
-    id = "myModal" and class="modal"
-
--->
-
-<!-- 
-
-    Okay, so two things are happening here.  Let's go step by step:
-
-    id = "myModal" is targetting the Javascript.  This is because in the JS, it is saying to have this line read this:
-    var modal = document.getElementById("myModal");
-
-    We're having the variance "modal" INSIDE the Javascript equal to whatever it is in the document, retreiving
-    what the element is by Id, which is "myModal"
-
-    The second thing is:
-    class="modal"
-
-    On this one, we're calling on the .css file to retrieve the function for .modal.  It is this:
-
-    .modal {
+    <div class="wrapper">
+        <header>
+          <h1>Password Generator</h1>
+        </header>
+        <div class="card">
+          <div class="card-header">
+            <h2>Generate a Password</h2>
+          </div>
+          <div class="card-body">
+            <p>Your password is: </p>
+            <p id = "passwordgenerated"></p>        
+            <textarea
+              readonly
+              id="password"
+              placeholder="Your Secure Password"
+              aria-label="Generated Password"
+            ></textarea>
+          </div>
+          <div class="card-footer">
+            <button id="myBtn" class="btn">Generate Password</button>
+          </div>
+        </div>
+      </div>  
 
 
-    /* 
-        Hidden by default 
-        When this is first mentioned, this will be invisible.  Thus, why it says "display: none;"
-        
-    */
-    display: none; 
-
-    /* 
-
-    Stay in place 
-    Have it stay in the middle
-
-    */
-    position: fixed;
 
 
-    /* Sit on top */
-    z-index: 1; 
-
-    left: 0;
-    top: 0;
 
 
-    /*One of the things we need is to have the window set in place and in a fixed size.  If there were more
-    text, then it'll expand it a bit*/
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
 
 
-    /* 
 
-        Enable scroll if needed 
-        This is in case that the messag expands and increases in size.
-
-    */
-    overflow: auto; 
-
-
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-
-
- -->
-
-    <!-- REMEMBER:  ID is for the JS, CLASS is for the CSS -->
     <div id="myModal" class="modal">
-
-  <!-- Modal content -->
-
-  <!-- Let's go slowly again.  Here, we have
-
-    class = "modal-conent"
-
-    This will cause the call to happen to this:
-
-    .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-
-
-
-
--->
 
         <div class="modal-content">
 
-    <!-- 
-
-        class="close" is called again.  css file:
-
-        .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        }
-
-     -->
-
-     <!-- This is the little "X" on the window. -->
             <span class="close">&times;</span>
-
     <!-- 
         
         Have this message change.  We're going to need the following:
@@ -167,8 +69,6 @@
 
             <!-- Have this visible when clicked.  But when it changes to the next window, disappear. -->
             <button id="myBtnnext">Next</button>
-            <br>
-            <br>
 
             <!--
             //Make this invisible first.  When the next button is clicked, have this visible
@@ -178,28 +78,11 @@
             <!-- Label inserted.  Now to find out how to extract information to css -->
             <label for="usernumber"></label>
             <p id = "userinput"></p>
-            <input type="text" id = "usernumber" name="usernumber"><br><br>
+            <input type="text" id = "usernumber" name="usernumber" placeholder = "Enter your number"><br><br>
 
+            <button id="submitnumber">Submit</button>
             <button id="btninputyes">Yes</button>
             <button id="btninputno">No</button>
-
-             
-
-            <!-- 
-                What we need to do now is have this button link to a box.  First, we initiate by declaring an ID for the button
-                In this case, the ID for the button is "myBtnnext"
-
-                This needs to be chained with a function inside the script.  The script is going to be a variance button name.
-                In this case, I made the JS script to include a variance named "btnnext", which links back to the button
-                declared as "myBtnnext":
-
-                In the JS:  
-                //var btnnext = document.getElementById("myBtnnext");
-
-                //<button id="myBtn">Open Modal</button>
-
-                -->
-             
 
         </div>  
 
