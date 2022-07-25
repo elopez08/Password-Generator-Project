@@ -65,6 +65,8 @@ Going by 1, this is all from what happened in the .HTML.  We were given a struct
 
 #   [CSS Modal](#css-modal)
 
+![Button Pressed](./NewImages/Button-Clicked.JPG)
+
 On the 2nd step, the imporant step to take is how the program is going to read it as a CSS.  This ensures a few important features.  In the .css, there's a function for ".modal" which is going to be used on the code.  With the properties being defined there, it ensures that there's a window popup that'll ask a few questions.  Something to note is that with each function, there needs to be a way to manipulate to give the illusion of something.  What I mean by this is that with the function, we can make the window pop out, but it'll overlay the page.  A new sets of properties was added in it as well:
 
     background-color: rgb(0,0,0); /* Fallback color */
@@ -134,6 +136,8 @@ With this, it'll cause the timer to halt and thus ending the program.
 
 #   [Ensure Data Extraction](#ensure-data-extraction)
 
+![Inputting Numbers](./NewImages/Inputting-Number.JPG)
+
 Step 6 is just as important.  There are two datas that is being extracted that will be used as sources:  One which the user types in the number and one when the password is being generated.  For the user, that's on step 2.  This is the screenshot:
 
 {use the screenshot for the 2nd step}
@@ -163,6 +167,8 @@ Finally, we have the password itself.  Notice this part here:
 
 I'm using a declared strings for the characters.  With this in mind, we have one more obstacle:  How does it know to use these?  This is where the next difference is from before:  The cases.  On the "btnyes", this is what triggers it:
 
+![Answering Questions](./NewImages/Answering-Questions.JPG)
+
         btnyes.onclick = function() {
             switch (wordsentence) {
                 ...
@@ -181,6 +187,8 @@ This is an empty array.  Whenever you click "yes" on its respected cases, you ta
     var lowercaseletters = 'abcdefghijklmnopqrstuvwxyz';
 
 We need this so that it'll randomly generate the password.
+
+![Final Result](./NewImages/Final-Results.JPG)
 
 ##  [What Was Done Differently](#what-was-done-differently)
 
