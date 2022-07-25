@@ -21,6 +21,7 @@ By Edgardo Lopez
 *  [Contributing](#contributing)
 *  [Project Status](#project-status)
 *  [Disclaimer](#disclaimer)
+
 ==============================
 
 ##  [The Purpose](#the-purpose)
@@ -39,26 +40,30 @@ git clone {link of the project}
 Remember to use a program such as Powershell and have a program like Visual Studio Code to be able to open and edit the project.
 
 ##  [Usage](#usage)
+
+![Beginning](./NewImages/Beginning.JPG)
+
 In order to use the program, first, open up the main.html file that's located in the folder.  Right click, and then open up to your default browser (I'll be using Chrome for this example).  Once that's done, click on the "Generate Password" button and answers the questions prompt on the pop up.  Once that's done, you'll be given a password generated depending on the output you have defined when answering the length of the password and it'll generate the characters according to your desired specifications (such as lower case value, upper case value, etc.).
 
 ##  [The Process](#the-process)
 
 As explained in the Disclaimer, this is a remake of the ReadMeOldFile.  Most of the information process that you'll see in this section is mostly done on what I did when changing the code.  For a brief skim on what was the process, read on the ReadMeOldFile.  In case that this is the only ReadMe that's being read, a few obstacles that needed to be tackled in order to make sure this is working:
 
-    1.  IDs that are being defined
-    2.  CSS in accordance to the Modal
-    3.  HTML format is structured correctly for the Modal
-    4.  JS functioning correctly when the buttons are clicked
-    5.  Setting a timer/steps for the questions
-    6.  Ensuring data is being extracted when called
+*   [ID Defined](#id-defined)
+*   [CSS Modal](#css-modal)
+*   [HTML Format Modal](#html-format-modal)
+*   [JS Function Clicked](#js-function-clicked)
+*   [Timer on Steps](#timer-on-steps)
+*   [Ensure Data Extraction](#ensure-data-extraction)
 
 Let's tackle each of them.
 
-#   IDs that are being defined
+
+#   [ID Defined](#id-defined)
 
 Going by 1, this is all from what happened in the .HTML.  We were given a structure on how the code is going to look like, so we used that as a base.  However, there's one thing that needed to be added:  A Modal that displays the questions/answers on what we need to do for each of the steps.  Thus, we needed to make one more feature, which is defined as "myModal".  
 
-#   CSS in accordance to the Modal
+#   [CSS Modal](#css-modal)
 
 On the 2nd step, the imporant step to take is how the program is going to read it as a CSS.  This ensures a few important features.  In the .css, there's a function for ".modal" which is going to be used on the code.  With the properties being defined there, it ensures that there's a window popup that'll ask a few questions.  Something to note is that with each function, there needs to be a way to manipulate to give the illusion of something.  What I mean by this is that with the function, we can make the window pop out, but it'll overlay the page.  A new sets of properties was added in it as well:
 
@@ -68,7 +73,7 @@ On the 2nd step, the imporant step to take is how the program is going to read i
 This will make the entire screen with an opacity of black, but not the window.  With this, we created an illusion where the window is popped out.  The idea behind it is so that the eyes are focused on the window itself and not the entire page.  In other words, while we are generating the password, it's making sure that particular window is standing out.
 
 
-#   HTML format is structured correctly for the Modal
+#   [HTML Format Modal](#html-format-modal)
 
 Step 3 is more on identifying the IDs for the Modal.  When the "id"s are being defined, that will give an identity for the JS.  We needed to make sure that it is followed.  In addition to this, we needed to make sure that the position is correct, or at the very least, looks neatly as possible, when the window pops out.  This is what the "myModal" looks like in the HTML:
 
@@ -111,12 +116,12 @@ Step 3 is more on identifying the IDs for the Modal.  When the "id"s are being d
 
 Why are all the buttons and texts being defined?  When the code is called, this will be put in the myModal, so it'll structure the position of it.  What I did before all of this is make a dummy "modal" and see how it looked like below the code.  Once the window is set in place, I took out anything unnecessary and then have it "hidden".  It'll be defined in the JavaScript.  For now, picture that window with all the buttons, but it's "invisible".
 
-#   JS functioning correctly when the buttons are clicked
+#   [JS Function Clicked](#js-function-clicked)
 
 Step 4 now takes us to the gears of the project:  The functions.  One of the things I wanted to restructure was defining all the buttons and texts with the IDs first BEFORE anything else.  You'll see the "getElementById", for example, in the beginning giving each of the IDs and identity for the JS.  There are a few more things being added to the JS, which is why that is then put as the second structure such as "wordsentence".  This is important, but this will be defined in the JS.  Once that's done, I gave three overall identities:  btn when clicked, function of the questionsPassword(), and PasswordGen().  Where are the other buttons?  It is located inside the questionsPassword().  These buttons will serve purpose in the timer, but the btn that is being defined outside of it is the only one that's working outside of the timer, thus, why I structured it that way.
 
 
-#   Setting a timer/steps for the questions
+#   [Timer on Steps](#timer-on-steps)
 
 Step 5 is another big one.  One of the things that was added that wasn't COMPLETELY necessary was the timer.  I wanted to add that for future development, but I wanted to make sure that this is working first.  Thus, we have this:      var msgInterval = setInterval(function () {
 What this does is that once the function is called (from the btn's trigger), it'll start a timer.  I have it set to 100 ms, so for each passing time, it'll go on the loop over and over again until something changes.  This is where the "wordsetence" finally comes into play.  As long as it is higher than 0 and less than 10, then it'll go on a constant loop.  If it doesn't know the number or if it reaches 0, then one of the if statements is triggered:
@@ -127,7 +132,7 @@ What this does is that once the function is called (from the btn's trigger), it'
 
 With this, it'll cause the timer to halt and thus ending the program.
 
-#   Ensuring data is being extracted when called
+#   [Ensure Data Extraction](#ensure-data-extraction)
 
 Step 6 is just as important.  There are two datas that is being extracted that will be used as sources:  One which the user types in the number and one when the password is being generated.  For the user, that's on step 2.  This is the screenshot:
 
@@ -228,5 +233,3 @@ With the changes I did, there aren't any bug encounters (at least not from what 
 
 This is an ongoing project that will be redefined for a must cleaner coding if it is complicated.
 Changes made from last time:  July 14, 2022 by Edgardo Lopez
-
-#   [Disclaimer](#disclaimer)

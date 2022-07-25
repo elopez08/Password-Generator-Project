@@ -91,13 +91,14 @@ function questionsPassword() {
             }
         } 
         submitInput.onclick = function() {
-            if (usernumberlabel.value < 8 || usernumberlabel.value > 128)
+            if (usernumberlabel.value < 8 || usernumberlabel.value > 128 || isNaN(usernumberlabel.value) )
             {
                 console.log(`This isn't valid!  Try again!`);
             }
             else
             {
                 numberofstrings = usernumberlabel.value;
+                console.log("The numberofstrings is: " + numberofstrings);
                 wordsentence++;
             }
         }
@@ -238,4 +239,9 @@ function PasswordGen()
         console.log(`Password: ` + finalpasswordgenerator);
     }
   finalpasswordoutcome.textContent = finalpasswordgenerator;
+  wordsselected = ``;
+  finalpasswordgenerator = ``;
+  passwordgenerator = ``;
+  numberofstrings = ``;
+  i=0;
 }
